@@ -20,13 +20,20 @@ def render(world,current_location):
 
 def check_input():
     '''request input from the player, validate the input'''
-    user_input = input("What would you like to do? ")
+    user_input = input("\nWhat would you like to do? ").strip().upper()
     # do we want to validate?
     return user_input
 
-def update():
+def update(selection,game,current):
     '''Check if we need to move to a new location, etc..'''
-    return True
+    for e in game ['rooms'][current]['exits']:
+        if e['verb'] == selection:
+            if e['target'] == 'NoExit':
+                print('You cannot go that way')
+            else:
+                current = e['target']
+            
+    return current
 
 
 def main():
@@ -42,8 +49,10 @@ def main():
         #render the world
         render(game['rooms'],current)
         #check for player input
-        user_input = check_input()
+        selection = check_input()
         #update the state of the world
+        current = update(selection,game,current)
+        
 
     return True
 
