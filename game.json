@@ -1,4 +1,5 @@
 {
+
     "verbs": [
       { "v": "EXITS",   "map": "EXITS" },
       { "v": "QUIT",    "map": "QUIT"  },
@@ -306,7 +307,7 @@
           },
           {
             "verb": "SOUTH",
-            "target": "QUIT",
+            "target": "DEATH",
             "condition": ""
           }       
         ],
