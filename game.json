@@ -1,0 +1,397 @@
+{
+    "verbs": [
+      { "v": "EXITS",   "map": "EXITS" },
+      { "v": "QUIT",    "map": "QUIT"  },
+      { "v": "NORTH",   "map": "NORTH" },
+      { "v": "N",       "map": "NORTH" },
+      { "v": "SOUTH",   "map": "SOUTH" },
+      { "v": "S",       "map": "SOUTH" },
+      { "v": "EAST",    "map": "EAST"  },
+      { "v": "E",       "map": "EAST"  },
+      { "v": "WEST",    "map": "WEST"  },
+      { "v": "W",       "map": "WEST"  },
+      { "v": "DEATH",    "map": "QUIT"  },
+      { "map": "DEATH"}
+    ],
+
+    "rooms": {
+      "START": {
+        "name": "at Dracula's Lair Entrance",
+        "desc": "You see doors, an abandoned shack, and what looks to be a backyard",
+        "exits": [
+          {
+            "verb": "NORTH",
+            "target": "FRONTDOOR",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "ROAD",
+            "condition": "what is this"
+          },
+          {
+            "verb": "WEST",
+            "target": "SHACK",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "BACKYARD",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "FRONTDOOR": {
+        "name": "at the Front Doors",
+        "desc": "This must be how you get in!",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "INSIDE",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "START",
+            "condition": "what is this"
+          },
+          {
+            "verb": "WEST",
+            "target": "YARD2",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "BACKYARD",
+            "condition": ""
+          }    
+        ],
+        "inventory": []
+      },
+      "ROAD": {
+        "name": "at the Road",
+        "desc": "Looks like a dead-end. You should probably go North again!",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "START",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SECRET1",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "SECRET1",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "SECRET1",
+            "condition": ""
+          }    
+        ],
+        "inventory": []
+      },
+      "SHACK": {
+        "name": "at the Abandoned Shack",
+        "desc": "It looks abandoned and the door is closed, they may just open though...",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "INSIDESHACK",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "START",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "ROAD",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "YARD2",
+            "condition": ""
+          }    
+        ],
+        "inventory": []
+      },
+      "BACKYARD": {
+        "name": "in the Back Yard",
+        "desc": "Large yard containing another set of doors, a casket, and not much more.",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "CASKET",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "START",
+            "condition": "what is this"
+          },
+          {
+            "verb": "WEST",
+            "target": "DOOR",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "WALL",
+            "condition": ""
+          }    
+        ],
+        "inventory": []
+      },
+      "YARD2": {
+        "name": "in the Second Yard",
+        "desc": "Yet another yard, but this one only contains a dog house.",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "DOGHOUSE",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SHACK",
+            "condition": "what is this"
+          },
+          {
+            "verb": "WEST",
+            "target": "WALL",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "FRONTDOOR",
+            "condition": ""
+          }    
+        ],
+        "inventory": []
+      },
+      "INSIDE": {
+        "name": "Inside the Lair (main entrance)",
+        "desc": "You enter to see Dracula waiting on the other side of the room.",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "DEATH",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "FRONTDOOR",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "DEATH",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "DEATH",
+            "condition": ""
+          }      
+        ],
+        "inventory": []
+      },
+      "DOGHOUSE": {
+        "name": "in front of Dog House",
+        "desc": "You reach for the doghouse but a nasty growl grows from within. Some may call that a 'warning'.",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "DEATH",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "FRONTDOOR",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "WALL",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "YARD2",
+            "condition": ""
+          }       
+        ],
+        "inventory": []
+      },
+      "WALL": {
+        "name": "hitting a WALL",
+        "desc": "DEAD END PLEASE GO BACK THE WAY YOU CAME!",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "START",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "YARD2",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "BACKYARD",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "START",
+            "condition": ""
+          }       
+        ],
+        "inventory": []
+      },
+      "DEATH": {
+        "name": "on your death-bed",
+        "desc": "Dracula ended your life swiftly and methodically. Type 'Quit' to end the program",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "QUIT",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "QUIT",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "QUIT",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "QUIT",
+            "condition": ""
+          }       
+        ],
+        "inventory": []
+      },
+      "SECRET1": {
+        "name": "Secret Location",
+        "desc": "Congrats on pushing the boundaries and doing the unthinkable. For that, I'll let you walk away from here without Dracula ending your life and you can consider this a win!",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "ROAD",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "ROAD",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "ROAD",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "QUIT",
+            "condition": ""
+          }       
+        ],
+        "inventory": []
+      },
+      "CASKET": {
+        "name": "Casket",
+        "desc": "A slightly ajar casket carrying non-other than Dracula himself. Do you dare investigate?",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "DEATH",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "WALL",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "DOOR2",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "BACKYARD",
+            "condition": ""
+          }       
+        ],
+        "inventory": []
+      },
+      "DOOR2": {
+        "name": "at the Side-Door",
+        "desc": "This door might be just what we're looking for to get in!",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "INSIDE",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "WALL",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "ENTRANCE",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "BACKYARD",
+            "condition": ""
+          }       
+        ],
+        "inventory": []
+    },
+    "INSIDESHACK": {
+        "name": "inside the shack",
+        "desc": "There is nothing in here.",
+        "exits": [
+         {
+            "verb": "NORTH",
+            "target": "WALL",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "WALL",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "WALL",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SHACK",
+            "condition": ""
+          }       
+        ],
+        "inventory": []
+    }
+  }
+}
