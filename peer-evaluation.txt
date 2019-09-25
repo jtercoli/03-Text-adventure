@@ -1,0 +1,39 @@
+Name:Dylan Redmon
+Date: 9/25/2019
+Project: 03 Text Adventure
+Peer's repository:  jtercoli?
+
+
+
+What is something you learned by reviewing your peer's project?
+-That you can make it to where the system will load multiple games depending on the user's choice
+ 
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+-A sense of variety and open options
+ 
+
+What suggestions would you have for your peer to improve his/her code?
+-You can make the room descriptions longer than one line by typing \r\n before a word to create a new line of dialogue.
+
+
+What could have been clearer or better commented?
+-You could have specified which directions lead where, you listed the different areas but did not specify which direction they were in.
+ 
+
+Was there anything in the code that was confusing to you? If so, what?
+-Some of the conditions had "what is this" typed in them.
+ 
+
+Does the repository contain an appropriate LICENSE?
+-Yes it does
+ 
+
+What is something he/she could add to the README.md to make it more descriptive?
+-Describe what your game is a bit more, the premise isn't mentioned.
+ 
+
+Pay a compliment to your peer based on the quality of his/her code.
+-You added a lot of areas for the user to go to, and I liked the location names and descriptions in the game.json file
+I also really like the game option mechanic at the beginning, I didn't know how to give the user multiple options.
+
